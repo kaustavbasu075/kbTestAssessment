@@ -28,9 +28,9 @@ jobs:
         continue-on-error: true
 
       - name: Upload Test Report Artifacts
-        uses: actions/upload-artifact@v4
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: test-results/allure-report
+          path: test-results
           retention-days: 30
